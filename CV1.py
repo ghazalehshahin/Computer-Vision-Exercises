@@ -2,8 +2,9 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
-img = cv.imread ('bicycle.png')
-
+# img = cv.imread ('dolphin.png')
+# img = cv.imread ('bicycle.png')
+img = cv.imread ('fruit.png')
 
 ##show image and wait
 # cv.imshow("image", img)
@@ -28,8 +29,20 @@ if img is None:
 ##cropping an image
 # print(img.shape)
 # cv.imshow("original", img)
-cropped_img = img[110:310, 10:160]
-print(cropped_img.shape)
-cv.imshow("cropped", cropped_img)
+# cropped_img = img[110:310, 10:160]
+# print(cropped_img.shape)
+# cv.imshow("cropped", cropped_img)
+
+##working with colors
+# cv.imshow("colored image", img)
+red_img = img [:,:,1]
+# print(red_img.shape)
+# cv.imshow("red img", red_img)
+color = ('b','g','r')
+for i,col in enumerate(color):
+    histr = cv.calcHist([img],[i],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.show()
 cv.waitKey(0)
 cv.destroyAllWindows()
