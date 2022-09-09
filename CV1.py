@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import sys
 # img = cv.imread ('dolphin.png')
 # img = cv.imread ('bicycle.png')
-img = cv.imread ('fruit.png')
+img = cv.imread ('images/fruit.png')
 
 ##show image and wait
 # cv.imshow("image", img)

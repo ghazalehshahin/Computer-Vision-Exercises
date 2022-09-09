@@ -2,8 +2,8 @@ import numpy as np
 import cv2 as cv
 import sys
 
-img1 = cv.imread("bicycle.png")
-img2 = cv.imread("fruit.png")
+img1 = cv.imread("images/bicycle.png")
+img2 = cv.imread("images/fruit.png")
 
 rows, cols, channels = img2.shape
 roi = img1[0:rows, 0:cols]
