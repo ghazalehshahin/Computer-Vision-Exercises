@@ -37,7 +37,11 @@ def main():
     result = np.zeros((360, 360, 3) , np.uint8)
     index = 1
     alpha = 1.0
+    e1 = cv.getTickCount()
     ImageData = getImagePath()
+    e2 = cv.getTickCount()
+    time = (e2-e1)/cv.getTickFrequency()
+    print("time: ", time)
     img = getImage(ImageData, index)
     slideShow(ImageData, index, alpha, result, img)
     cv.destroyAllWindows()
