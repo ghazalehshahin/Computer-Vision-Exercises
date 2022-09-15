@@ -11,12 +11,6 @@ color_dict_HSV = {
               'yellow': [[35, 255, 255], [25, 50, 70]]
 }
 
-# lower_blue = np.array([9,50,70])
-# upper_blue = np.array([9, 255,255])
-# mask = cv.inRange(hsv,lower_blue, upper_blue)
-# cv.imshow("object", mask)
-# cv.waitKey(0)
-
 for i in color_dict_HSV:
   mask = cv.inRange(hsv,np.array(color_dict_HSV.get(i)[1]), np.array(color_dict_HSV.get(i)[0]))
   res = cv.bitwise_and(img,img,mask=mask)
