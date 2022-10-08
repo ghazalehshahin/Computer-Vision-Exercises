@@ -40,6 +40,7 @@ def draw_circle_rectangle(event,x,y,flags,param):
         else:
             cv.circle(img,(x,y),5,(0,0,255),-1)
 
+
 def draw_unfilled_rectangle(event,x,y,flags,param):
     global ix,iy,drawing,mode,img
     if event == cv.EVENT_LBUTTONDOWN:
